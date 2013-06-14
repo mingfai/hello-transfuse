@@ -1,0 +1,10 @@
+.idea/*
+_site/*
+*~
+*.iml
+build.sh
+target
+tmp
+default.properties
+out
+gen
