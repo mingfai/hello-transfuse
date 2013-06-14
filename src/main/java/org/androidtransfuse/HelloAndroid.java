@@ -1,8 +1,10 @@
 package org.androidtransfuse;
 
 import org.androidtransfuse.annotations.*;
+import org.androidtransfuse.annotations.Activity;
 
 import javax.inject.Inject;
+import javax.inject.Named;
 
 // Example Transfuse Activity
 @Activity(label = "@string/app_name")
@@ -17,11 +19,21 @@ public class HelloAndroid {
     @View(R.id.textview)
     private android.widget.TextView textView;
 
+    @Inject
+    @Named("packageName")
+    private String packageName;
+
+    @Inject
+    private android.app.Application application;
+
     @Inject @Resource(R.string.hello)
     private String helloText;
 
+    @Inject
+    private Injector injector;
+
     @OnCreate
     public void hello() {
-        textView.setText(helloText);
+        textView.setText(helloText + ": " + packageName + " : " + injector.getPetstore(application));
     }
 }

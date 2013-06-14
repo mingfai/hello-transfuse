@@ -17,4 +17,9 @@ public class Module {
     public String getName(Application application){
         return application.getPackageName();
     }
+
+    @Provides
+    public PetStore getPetstore(Application application){
+        return new PetStore(application);
+    }
 }
