@@ -1,7 +1,6 @@
 package org.androidtransfuse;
 
 import org.androidtransfuse.annotations.*;
-import org.androidtransfuse.annotations.Activity;
 
 import javax.inject.Inject;
 import javax.inject.Named;
@@ -34,6 +33,9 @@ public class HelloAndroid {
 
     @OnCreate
     public void hello() {
-        textView.setText(helloText + ": " + packageName + " : " + injector.getPetstore(application));
+        textView.setText(helloText + ": " +
+                packageName + " : " +
+                injector.getPetstore(application) + " : " +
+                Factories.get(Injector.class).getPackageName(application));
     }
 }

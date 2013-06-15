@@ -1,7 +1,6 @@
 package org.androidtransfuse;
 
 import android.app.Application;
-import android.content.Context;
 import org.androidtransfuse.annotations.Factory;
 
 import javax.inject.Named;
@@ -12,5 +11,8 @@ import javax.inject.Named;
 @Factory
 public interface Injector {
 
-    public PetStore getPetstore(Application application);
+    PetStore getPetstore(Application application);
+
+    @Named("packageName")
+    String getPackageName(Application application);
 }
