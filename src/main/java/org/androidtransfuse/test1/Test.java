@@ -10,11 +10,11 @@ import java.util.ArrayList;
 import java.util.List;
 
 @org.androidtransfuse.annotations.Activity(label = "@string/app_name")
-@Layout(R.layout.test_activity)
+@Layout(R.layout.test1_activity)
 public class Test {
     @Inject @View(R.id.test1_list) ListView list;
     @Inject TestAdapter adapter;
-    @Inject TestService service;
+    //@Inject TestService service;
 
 
     @OnCreate public void onCreate() {
