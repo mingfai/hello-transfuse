@@ -1,4 +1,4 @@
-package org.androidtransfuse.test1;
+package org.androidtransfuse.test3;
 
 import android.app.Activity;
 import android.widget.ArrayAdapter;

@@ -1,4 +1,4 @@
-package org.androidtransfuse.test1;
+package org.androidtransfuse.test3;
 
 import android.widget.ListView;
 import org.androidtransfuse.R;
@@ -14,11 +14,11 @@ import java.util.List;
 public class Test {
     @Inject @View(R.id.test1_list) ListView list;
     @Inject TestAdapter adapter;
-    //@Inject TestService service;
+    @Inject TestService service;
 
 
     @OnCreate public void onCreate() {
-        list.setAdapter(adapter);
+       // list.setAdapter(adapter);
     }
 
     @TransfuseModule

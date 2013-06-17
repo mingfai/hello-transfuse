@@ -1,4 +1,4 @@
-package org.androidtransfuse.test1;
+package org.androidtransfuse.test3;
 
 /**
  * @author mingfai.ma
