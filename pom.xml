@@ -50,11 +50,20 @@
 			<plugin>
 				<groupId>com.jayway.maven.plugins.android.generation2</groupId>
 				<artifactId>android-maven-plugin</artifactId>
-				<configuration>
-					<sdk>
-						<platform>16</platform>
-					</sdk>
-				</configuration>
+                <extensions>true</extensions>
+                <configuration>
+                    <sdk>
+                        <platform>16</platform>
+                    </sdk>
+                    <undeployBeforeDeploy>true</undeployBeforeDeploy>
+                    <proguard>
+                        <skip>false</skip>
+                        <config>proguard.cfg</config>
+                        <jvmArguments>
+                            <jvmArgument>-Xmx1024M</jvmArgument>
+                        </jvmArguments>
+                    </proguard>
+                </configuration>
 			</plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
